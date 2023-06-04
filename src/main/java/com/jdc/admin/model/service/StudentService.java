@@ -1,0 +1,21 @@
+package com.jdc.admin.model.service;
+
+import com.jdc.admin.model.dto.StudentDTO;
+import com.jdc.admin.model.entity.Student;
+import org.springframework.data.domain.Page;
+
+public interface StudentService {
+
+    Student loadStudentById(Long studentId);
+
+    Page<StudentDTO> loadStudentsByName(String name, int page, int size);
+
+    StudentDTO loadStudentByEmail(String email);
+
+    StudentDTO createStudent(StudentDTO studentDTO);
+
+    StudentDTO updateStudent(StudentDTO studentDTO);
+
+    void removeStudent(Long studentId);
+
+}
